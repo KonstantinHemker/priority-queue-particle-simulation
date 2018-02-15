@@ -1,17 +1,19 @@
 package simulation;
 
 public abstract class Collision extends AbstractEvent{
-    protected Particle[] ps_ = new Particle[2];
-    protected double[] hits_ = new double[2];
+    protected Particle[] ps_;
+    protected double[] hits_;
     /**
      * Constructor for Collision
      */
     public Collision(double t, Particle[] ps) {
         // TODO implement constructor
         super(t);
+        this.ps_ = new Particle[ps.length];
+        this.hits_ =  = new double[ps.length];
         for (int i=0;i<ps.length;i++){
-          ps_[i] = ps[i];
-          hits_[i] = ps[i].collisions();
+          this.ps_[i] = ps[i];
+          this.hits_[i] = ps[i].collisions();
         }
     }
     @Override
