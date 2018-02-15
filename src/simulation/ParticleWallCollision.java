@@ -12,8 +12,8 @@ public class ParticleWallCollision extends Collision {
   }
 
   public void happen(ParticleEventHandler peh){
-      peh.reactTo(this);
       Particle.collide(this.ps_[0],this.w_);
+      peh.reactTo(this);
   }
 
 }

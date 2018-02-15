@@ -7,7 +7,7 @@ public class TwoParticleCollision extends Collision {
   }
 
     public void happen(ParticleEventHandler peh){
-        peh.reactTo(this);
         Particle.collide(this.ps_[0],this.ps_[1]);
+        peh.reactTo(this);
     }
 }
