@@ -10,7 +10,7 @@ public abstract class Collision extends AbstractEvent{
         // TODO implement constructor
         super(t);
         this.ps_ = new Particle[ps.length];
-        this.hits_ =  = new double[ps.length];
+        this.hits_ = new double[ps.length];
         for (int i=0;i<ps.length;i++){
           this.ps_[i] = ps[i];
           this.hits_[i] = ps[i].collisions();
