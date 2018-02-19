@@ -14,7 +14,7 @@ operation. The main function resizes the data structure accordingly if
 adding the new element requires a greater array. 
 
 
-## Algorithm Design - MinPriorityQueue remove
+## Algorithm Design - MinPriorityQueue remove(T elem)
 To remove an element, the root node of the tree is removed and then
 one of the lower leaves is moved to that location before sorting. In
 order to sort the tree the root node (the previous leaf node) is
