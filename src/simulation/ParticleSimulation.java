@@ -41,12 +41,13 @@ public class ParticleSimulation implements Runnable, ParticleEventHandler{
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        Event c = this.queue_.remove();
-
-        if(c.isValid()){
-          this.model.moveParticles(c.time()-this.current_time);
-          this.current_time = c.time();
-          c.happen(this);
+        while(true){
+          Event c = this.queue_.remove();
+          if(c.isValid()){
+            this.model.moveParticles(c.time()-this.current_time);
+            this.current_time = c.time();
+            c.happen(this);
+          }
         }
       }
 
@@ -64,8 +65,9 @@ public class ParticleSimulation implements Runnable, ParticleEventHandler{
       /*
       this.queue_.add( (Event) this.model.predictCollisions(ps_[0], c.time()));
       this.queue_.add( (Event) this.model.predictCollisions(ps_[1], c.time()));*/
-      add_collisions(ps_[0],c);
-      add_collisions(ps_[1],c);
+      for(int i = 0; i<ps_.length;i++){
+        add_collisions(ps_[i],c);
+      }
     }
 
     @Override

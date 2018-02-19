@@ -7,12 +7,13 @@ public class ParticleWallCollision extends Collision {
     //Constructor of ParticleWallCollision
     //TO DO
     super(t,new Particle[] {ps} );
-    //Particle[] ps_ = new Particle[2];
     this.w_ = w;
   }
 
+  @Override
   public void happen(ParticleEventHandler peh){
       Particle.collide(this.ps_[0],this.w_);
+      //Particle.collide(this.ps_[0],this.w_);
       peh.reactTo(this);
   }
 
