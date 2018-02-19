@@ -1,6 +1,6 @@
 # 580 - Algorithms Assignment 1
 
-##Algorithm Design - MinPriorityQueue add(T elem)
+## Algorithm Design - MinPriorityQueue add(T elem)
 We implemented the adding function for the MinPriorityQueue using one
 base cases and one recursive call. The base case for the adding
 function is if the parent was a root node. We passed the elements that
@@ -14,7 +14,7 @@ operation. The main function resizes the data structure accordingly if
 adding the new element requires a greater array. 
 
 
-##Algorithm Design - MinPriorityQueue remove
+## Algorithm Design - MinPriorityQueue remove
 To remove an element, the root node of the tree is removed and then
 one of the lower leaves is moved to that location before sorting. In
 order to sort the tree the root node (the previous leaf node) is
