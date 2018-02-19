@@ -104,80 +104,10 @@ public class MinPriorityQueue<T extends Comparable<T>> {
       queue[index2] = temp;
     }
 
-
-    /* TEMPORARY TESTING FUNCTION */
-    /*
-    public int compare_to(double x1, double x2) {
-      if (x1 > x2)
-        return 1;
-
-      if (x1 == x2)
-        return 0;
-
-      return -1;
-    }*/
-
-    /**
-     * Removes, and returns, the element at the front of the queue.
-     */
-     /*
-    public T remove() {
-        // TODO implement this method
-        return null;
-    }*/
-
-/*
-    private void print_section(double width,int type){
-
-	if (type == 1){
-	   for (int spacing=1;spacing <= (width);spacing++)
-	       System.out.print(" ");
-	   System.out.print("|");
-	   for (int spacing=1;spacing < (width);spacing++)
-	       System.out.print("_");
-
-	}else{
-	   for (int spacing=1;spacing < (width);spacing++)
-	       System.out.print("_");
-	   System.out.print("|");
-	   for (int spacing=1;spacing <= (width);spacing++)
-	       System.out.print(" ");
-	}
-
-
-
-    }
-
-    public void print_q () {
-      double depth = 1;
-      double width = Math.ceil(queue_length/2);
-      int increment = 1;
-
-
-      //for (int i = 1; i < end_ptr; i++) {
-        //System.out.println(queue[i]);
-	//}
-
-      for (int i = 1; i < end_ptr; i++) {
-
-	  print_section(width,1);
-        System.out.print((int) queue[i]);
-	print_section(width,2);
-
-	if (i == depth*2-1){
-	    depth = depth*2;
-	    width = Math.ceil(queue_length/depth/2);
-	    System.out.println(" ");
-	    System.out.println(" ");
-	}
-      }
-    }
-*/
     /**
      * Returns true if the queue is empty, false otherwise.
      */
     public boolean isEmpty() {
-        // TODO implement this method
         return false;
     }
 

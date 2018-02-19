@@ -41,7 +41,7 @@ public class ParticleSimulation implements Runnable, ParticleEventHandler{
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        while(true){
+        while(!this.queue_.isEmpty()){
           Event c = this.queue_.remove();
           if(c.isValid()){
             this.model.moveParticles(c.time()-this.current_time);
